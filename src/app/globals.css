@@ -27,12 +27,6 @@ body {
 }
 
 
-body {
-  background-color: #87CEEB; /* Azul cielo */
-  overflow: hidden;
-  margin: 0;
-  height: 100vh;
-}
 
 .bubbles-container {
   position: relative;
