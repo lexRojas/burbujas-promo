@@ -4,9 +4,16 @@ import burbujas from "../../public/burbujas-logo.png"
 import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
 import facebook from "../../public/facebook.png"
+import Style from "./Text.module.css"
+
+import img1 from "../../public/stock/image1.jpg"
 
 
-import { Sour_Gummy } from 'next/font/google';
+import { Sour_Gummy, Oswald } from 'next/font/google';
+import Carousel from "../../components/Carousel";
+
+
+
 
 const alice = Sour_Gummy(
   {
@@ -18,11 +25,30 @@ const alice = Sour_Gummy(
 
 )
 
+const oswald = Oswald(
+  {
+    weight: '500',
+    subsets: ['latin'],
+    style: 'normal',
+
+  }
+
+)
 
 export default function Home() {
 
+  console.log(img1.src)
+
+  const imageLinks = [
+    { src: "/stock/image1.jpg", link: 'https://example.com/1' },
+    { src: "/stock/image2.jpg", link: 'https://example.com/1' },
+    { src: "/stock/image3.jpg", link: 'https://example.com/1' },
+    { src: "/stock/image4.jpg", link: 'https://example.com/1' },
 
 
+
+
+  ];
 
   return (
 
@@ -41,8 +67,13 @@ export default function Home() {
             src={burbujas}
             alt="Burrbujas"
             style={{ width: 'clamp(100px,500px,450px)' }}
+            className="logo-luminoso"
           >
           </Image>
+          <div className={Style.textcontainer} >
+            <p className={` ${oswald.className} ${Style.textmove}`}  >¡Los momentos alegres comienzan aquí!</p>
+          </div>
+
         </div>
         <div className="bar flex row-start-2 bg-gray-100 w-full justify-center p-1">
           <ul className={` ${alice.className} flex flex-row space-x-2  md:space-x-5  md:text-xl `}>
@@ -53,33 +84,54 @@ export default function Home() {
 
 
         </div>
-        <main className="flex flex-col gap-8 row-start-3 items-center sm:items-start">
+        <main className="flex flex-col gap-8 row-start-3 items-center  ">
 
-          <div className="flex items-center 
-                          justify-center 
-                          size-64 ring-4 
-                          ring-yellow-400 
-                          border-red-950  
-                          border-4  
-                          rounded-3xl 
-                          bg-red-500 ">
+          <div>
 
-            <p className="font-extrabold   text-xl">Ver puntos </p>
+            <Carousel images={imageLinks} />
+
+
+
+
           </div>
 
 
+          <div className="flex flex-col gap-3 ">
+            <div className="flex items-center 
+                          justify-center  
+                          p-5
+                          bg-button-1 ">
+
+              <p className="font-extrabold   text-xl">Inscribirse </p>
+            </div>
+            <div className="flex items-center 
+                          justify-center  
+                          p-5
+                          bg-button-2 ">
+
+              <p className="font-extrabold   text-xl">Ver Puntos </p>
+            </div>
+            <div className="flex items-center 
+                          justify-center  
+                          p-5
+                          bg-button-3 ">
+
+              <p className="font-extrabold   text-xl">Reglamento </p>
+            </div>
+
+          </div>
 
         </main>
-        <footer className="row-start-4 flex  flex-row  gap-6 flex-wrap items-center justify-center">
+        <footer className="row-start-4 flex  flex-row  pt-6 gap-6 flex-wrap items-center justify-center">
           <div className="flex items-center gap-3">
-            <Image className="img-luminosa" alt="Whatsap" src={whatsap} width={30} ></Image>
-            <span className="text-white hover:text-yellow-300"> Whatsap </span></div>
+            <Image className="img-luminosa" alt="Whatsap" src={whatsap} width={25} ></Image>
+            <span className="text-black hover:text-blue-800"> Whatsap </span></div>
           <div className="flex items-center gap-3">
-            <Image className="img-luminosa" alt="Whatsap" src={facebook} width={30} ></Image>
-            <span className="text-white hover:text-yellow-300"> Facebook </span> </div>
+            <Image className="img-luminosa" alt="Whatsap" src={facebook} width={25} ></Image>
+            <span className="text-black hover:text-blue-800"> Facebook </span> </div>
           <div className="flex items-center gap-3">
-            <Image className="img-luminosa" alt="Whatsap" src={instagram} width={30} ></Image>
-            <span className="text-white hover:text-yellow-300"> Instagram </span> </div>
+            <Image className="img-luminosa" alt="Whatsap" src={instagram} width={25} ></Image>
+            <span className="text-black hover:text-blue-800"> Instagram </span> </div>
 
 
         </footer>

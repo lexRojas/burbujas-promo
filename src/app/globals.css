@@ -42,8 +42,8 @@ body {
   width: 40px;
   height: 40px;
   /* background-color: rgba(14, 191, 245, 0.582); */
-  background: radial-gradient(closest-side, #01c4ff5b, #01c4ff7e, #01e1ff7e, #01e1ff65);
-  
+  /* background: radial-gradient(closest-side at 65% 30%, #01c4ff5b, #01c4ff7e, #01e1ff7e, #01e1ff65); */
+  background: radial-gradient(circle at 70% 30%, #ffffff7e, #d1eaef93, #a1d6df8c, #6cc2cf7a, #16acc083, #00b0cf85, #00b6df7c, #00bbef8c, #00bfff88); /* made at https://learnui.design/tools/gradient-generator.html */
   border-radius: 50%;
   animation: float 7s infinite;
   animation-timing-function: ease-in-out;
@@ -106,20 +106,44 @@ body {
 }
 
 .img-luminosa{
-  filter: drop-shadow(0 0 7px rgba(131, 253, 253, 0.973))
+  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973))
 }
 
-
+.logo-luminoso{
+  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973))
+}
 
 
 .bar{
 
-  border-radius: 7px;
-  background: linear-gradient(145deg, #7274b0, #888ad1);
-  box-shadow:  0px 0px 5px #696ba2,
-               0px 0px 5px #9597e4;
+  border-radius: 11px;
+  background: #0005a3;
+  box-shadow: inset 5px 5px 15px #000358,
+              inset -5px -5px 15px #0007ee;
 
 
-  color:rgb(0, 0, 94);
-  text-shadow: 1px 1px #9597e4 ;
+  color:rgb(255, 255, 255);
+
+}
+
+.bg-button-1{
+  border-radius: 11px;
+background: #eb008bff;
+box-shadow: inset 5px 5px 10px rgb(241, 156, 206),
+            inset -5px -5px 10px rgb(134, 4, 80);
+}
+
+.bg-button-2{
+  border-radius: 11px;
+background: rgb(6, 88, 25);
+box-shadow: inset 5px 5px 10px rgb(156, 241, 174),
+            inset -5px -5px 10px rgb(2, 77, 6);
+color: whitesmoke;
+}
+
+.bg-button-3{
+  border-radius: 11px;
+background: rgb(252, 152, 3);
+box-shadow: inset 5px 5px 10px rgb(252, 224, 101),
+            inset -5px -5px 10px rgb(134, 104, 4);
 }
