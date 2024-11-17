@@ -44,7 +44,7 @@ export default function Home() {
           >
           </Image>
         </div>
-        <div className="flex row-start-2 bg-gray-100 w-full justify-center p-1">
+        <div className="bar flex row-start-2 bg-gray-100 w-full justify-center p-1">
           <ul className={` ${alice.className} flex flex-row space-x-2  md:space-x-5  md:text-xl `}>
             <li>JUGUETERIA</li>
             <li>ELECTRÓNICOS</li>
