@@ -88,7 +88,7 @@ export default function Home() {
 
           <div>
 
-            <Carousel images={imageLinks} />
+            <Carousel images={imageLinks}/>
 
 
 

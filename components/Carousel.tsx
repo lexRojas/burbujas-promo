@@ -17,22 +17,22 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Desplazamiento automático cada segundo
-    useEffect(() => {
-        const interval = setInterval(() => {
-            nextImage();
-        }, 1000);
-        console.log(images)
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         nextImage();
+    //         console.log(currentIndex)
+    //     }, 6000);
 
-        return () => clearInterval(interval); // Limpieza del intervalo al desmontar
-    }, [currentIndex]);
+    //     return () => clearInterval(interval); // Limpieza del intervalo al desmontar
+    // }, );
 
     const nextImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentIndex((currentIndex) => (currentIndex + 1) % images.length);
     };
 
     const prevImage = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        setCurrentIndex((currentIndex) =>
+            currentIndex === 0 ? images.length - 1 : currentIndex - 1
         );
     };
 
