@@ -80,7 +80,7 @@ const ImageSliderReact= ({images}:Props) => {
             {
               images.map((item) => {
                 return <li key={item.id}>
-                  <Image alt='image' src={item.src} width={500} height={280} />
+                  <Image className='image' alt='image' src={item.src} width={250} height={250}   />
                 </li>
               })
             }

@@ -2,22 +2,22 @@ ul,
 li {
   list-style: none;
   white-space: nowrap;
+  padding: 5px;
 }
 
 li {
   display: inline-block;
 }
 
-img {
-  margin-top: -16px;
-}
 
 /* Main container */
 
 .main-container {
-  width: 500px;
-  height: 280px;
+  max-width: 1000px;
+  min-width: 100px;
+  height: auto;
   margin: 0 auto;
+
 }
 
 /* Slider container */
@@ -47,9 +47,13 @@ img {
   left: 32px;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #ff0000;
   z-index: 1;
   cursor: pointer;
+}
+
+.leftArrow:hover {
+  color: #e5ff00;
 }
 
 .rightArrow {
@@ -59,17 +63,25 @@ img {
   right: 32px;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #ff0000;
   z-index: 1;
   cursor: pointer;
+}
+
+.rightArrow:hover {
+  color: #e5ff00;
 }
 
 .container-images {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  border: 1px solid #eee;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973));
+  background-color: #0f3b04;
+  border: 3px solid #0f3b04;
   overflow: hidden;
+
+  
 }
 
 div.active {
