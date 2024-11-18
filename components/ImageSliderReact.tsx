@@ -75,7 +75,7 @@ const ImageSliderReact= ({images}:Props) => {
       <div className="slider-container">
         <div className='leftArrow' onClick={() => scrollToImage('prev')}>&#10092;</div>
         <div className='rightArrow' onClick={() => scrollToImage('next')}>&#10093;</div>
-        <div className="container-images">
+        <div className="container-images slider">
           <ul ref={listRef}>
             {
               images.map((item) => {

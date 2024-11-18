@@ -8,21 +8,12 @@ import Style from "./Text.module.css"
 import img1 from "../../public/stock/image1.jpg"
 
 
-import { Sour_Gummy, Oswald } from 'next/font/google';
+import { Oswald, Roboto_Condensed } from 'next/font/google';
 import ImageSliderReact from "../../components/ImageSliderReact";
 
 
 
 
-const alice = Sour_Gummy(
-  {
-    weight: '500',
-    subsets: ['latin'],
-    style: 'normal',
-
-  }
-
-)
 
 const oswald = Oswald(
   {
@@ -31,8 +22,16 @@ const oswald = Oswald(
     style: 'normal',
 
   }
-
 )
+
+
+const roboto_condensed = Roboto_Condensed({
+  weight: '500',
+  subsets: ['latin'],
+  style: 'normal'
+
+})
+
 
 export default function Home() {
 
@@ -65,7 +64,7 @@ export default function Home() {
           <Image
             src={burbujas}
             alt="Burrbujas"
-            style={{ width: 'clamp(100px,500px,450px)' }}
+            style={{ width: 'clamp(100px,600px,600px)' }}
             className="logo-luminoso"
           >
           </Image>
@@ -74,9 +73,9 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="bar flex row-start-2 bg-gray-100 w-full justify-center p-1">
-          <ul className={` ${alice.className} flex flex-row space-x-2  md:space-x-5  md:text-xl `}>
-            <li>JUGUETERIA</li>
+        <div className="bar flex row-start-2 w-full justify-center align-top ">
+          <ul className={` ${roboto_condensed.className} flex flex-row  space-x-2  md:space-x-5  md:text-xl `}>
+            <li className="flex">JUGUETERIA</li>
             <li>ELECTRÓNICOS</li>
             <li>LIBRERÍA</li>
           </ul>
@@ -86,12 +85,7 @@ export default function Home() {
         <main className="flex flex-col gap-8 row-start-3 items-center  ">
 
           <div className="flex flex-row">
-
             <ImageSliderReact images={imageLinks} />
-
-
-
-
           </div>
 
 
@@ -101,7 +95,7 @@ export default function Home() {
                           p-5
                           bg-button-1 ">
 
-              <p className="font-extrabold   text-xl">Inscribirse </p>
+              <p className="font-extrabold text-xl">Inscribirse </p>
             </div>
             <div className="flex items-center 
                           justify-center  
@@ -124,21 +118,21 @@ export default function Home() {
         <footer className="row-start-4 flex  flex-row  pt-6 gap-6 flex-wrap items-center justify-center">
           <div className="flex flex-shrink items-center gap-3">
 
-            <Image className="img-luminosa" alt="Whatsap" src={whatsap}  style={{width:'clamp(10px,25px,25px)'}} ></Image>
-          <span className="text-black hover:text-blue-800" style={{fontSize:'clamp(0.5rem, 2.5vw, 2rem)'}}> Whatsap </span>
-      </div>
-      
-      <div className="flex items-center gap-3">
-        <Image className="img-luminosa" alt="Whatsap" src={facebook} style={{width:'clamp(10px,25px,25px)'}} ></Image>
-        <span className="text-black hover:text-blue-800" style={{fontSize:'clamp(0.5rem, 2.5vw, 2rem)'}}> Facebook </span>
-      </div>
-      <div className="flex items-center gap-3">
-        <Image className="img-luminosa" alt="Whatsap" src={instagram} style={{width:'clamp(10px,25px,25px)'}} ></Image>
-        <span className="text-black hover:text-blue-800"  style={{fontSize:'clamp(0.5rem, 2.5vw, 2rem)'}} > Instagram </span>
-      </div>
+            <Image className="img-luminosa" alt="Whatsap" src={whatsap} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
+            <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }}> Whatsap </span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Image className="img-luminosa" alt="Whatsap" src={facebook} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
+            <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }}> Facebook </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <Image className="img-luminosa" alt="Whatsap" src={instagram} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
+            <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }} > Instagram </span>
+          </div>
 
 
-    </footer >
+        </footer >
       </div >
     </div >
   );

@@ -120,9 +120,8 @@ body {
   background: #0005a3;
   box-shadow: inset 5px 5px 15px #000358,
               inset -5px -5px 15px #0007ee;
-
-
   color:rgb(255, 255, 255);
+  padding: 7px;
 
 }
 
