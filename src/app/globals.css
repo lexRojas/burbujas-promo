@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
-  /* --background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-  linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
+
+
+
 
   --background: url("../../public/fondo.svg");
   --foreground: #010225;
@@ -28,8 +26,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 .bubbles-container {
   position: relative;
   width: 100%;
@@ -43,7 +39,18 @@ body {
   height: 40px;
   /* background-color: rgba(14, 191, 245, 0.582); */
   /* background: radial-gradient(closest-side at 65% 30%, #01c4ff5b, #01c4ff7e, #01e1ff7e, #01e1ff65); */
-  background: radial-gradient(circle at 70% 30%, #ffffff7e, #d1eaef93, #a1d6df8c, #6cc2cf7a, #16acc083, #00b0cf85, #00b6df7c, #00bbef8c, #00bfff88); /* made at https://learnui.design/tools/gradient-generator.html */
+  background: radial-gradient(
+    circle at 70% 30%,
+    #ffffff7e,
+    #d1eaef93,
+    #a1d6df8c,
+    #6cc2cf7a,
+    #16acc083,
+    #00b0cf85,
+    #00b6df7c,
+    #00bbef8c,
+    #00bfff88
+  ); /* made at https://learnui.design/tools/gradient-generator.html */
   border-radius: 50%;
   animation: float 7s infinite;
   animation-timing-function: ease-in-out;
@@ -105,44 +112,45 @@ body {
   animation-delay: 3s;
 }
 
-.img-luminosa{
-  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973))
+.img-luminosa {
+  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973));
 }
 
-.logo-luminoso{
-  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973))
+.logo-luminoso {
+  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973));
 }
 
-
-.bar{
-
+.bar {
   border-radius: 11px;
   background: #0005a3;
-  box-shadow: inset 5px 5px 15px #000358,
-              inset -5px -5px 15px #0007ee;
-  color:rgb(255, 255, 255);
+  box-shadow: inset 5px 5px 15px #000358, inset -5px -5px 15px #0007ee;
+  color: rgb(255, 255, 255);
   padding: 7px;
-
 }
 
-.bg-button-1{
+.main-button-1 {
   border-radius: 11px;
-background: #eb008bff;
-box-shadow: inset 5px 5px 10px rgb(241, 156, 206),
-            inset -5px -5px 10px rgb(134, 4, 80);
+  background: #eb008bff;
+  box-shadow: inset 5px 5px 10px rgb(241, 156, 206),
+    inset -5px -5px 10px rgb(134, 4, 80);
+  cursor: pointer;
 }
 
-.bg-button-2{
+.main-button-2 {
   border-radius: 11px;
-background: rgb(62, 145, 81);
-box-shadow: inset 5px 5px 10px rgb(156, 241, 174),
-            inset -5px -5px 10px rgb(2, 77, 6);
-color: whitesmoke;
+  background: rgb(62, 145, 81);
+  box-shadow: inset 5px 5px 10px rgb(156, 241, 174),
+    inset -5px -5px 10px rgb(2, 77, 6);
+  color: whitesmoke;
+  cursor: pointer;
 }
 
-.bg-button-3{
+.main-button-3 {
   border-radius: 11px;
-background: rgb(252, 152, 3);
-box-shadow: inset 5px 5px 10px rgb(252, 224, 101),
-            inset -5px -5px 10px rgb(134, 104, 4);
+  background: rgb(252, 152, 3);
+  box-shadow: inset 5px 5px 10px rgb(252, 224, 101),
+    inset -5px -5px 10px rgb(134, 104, 4);
+  cursor: pointer;
 }
+
+
