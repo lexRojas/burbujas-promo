@@ -87,7 +87,7 @@ export default function Home() {
 
           <div className="flex flex-row">
 
-            <ImageSliderReact images={imageLinks}/>
+            <ImageSliderReact images={imageLinks} />
 
 
 
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
 
 
-          <div className="flex flex-col gap-3 ">
+          <div className="flex flex-col gap-3 md:flex-row ">
             <div className="flex items-center 
                           justify-center  
                           p-5
@@ -122,19 +122,24 @@ export default function Home() {
 
         </main>
         <footer className="row-start-4 flex  flex-row  pt-6 gap-6 flex-wrap items-center justify-center">
-          <div className="flex items-center gap-3">
-            <Image className="img-luminosa" alt="Whatsap" src={whatsap} width={25} ></Image>
-            <span className="text-black hover:text-blue-800"> Whatsap </span></div>
-          <div className="flex items-center gap-3">
-            <Image className="img-luminosa" alt="Whatsap" src={facebook} width={25} ></Image>
-            <span className="text-black hover:text-blue-800"> Facebook </span> </div>
-          <div className="flex items-center gap-3">
-            <Image className="img-luminosa" alt="Whatsap" src={instagram} width={25} ></Image>
-            <span className="text-black hover:text-blue-800"> Instagram </span> </div>
+          <div className="flex flex-shrink items-center gap-3">
 
-
-        </footer>
+            <Image className="img-luminosa" alt="Whatsap" src={whatsap}  style={{width:'clamp(10px,25px,25px)'}} ></Image>
+          <span className="text-black hover:text-blue-800" style={{fontSize:'clamp(0.5rem, 2.5vw, 2rem)'}}> Whatsap </span>
       </div>
-    </div>
+      
+      <div className="flex items-center gap-3">
+        <Image className="img-luminosa" alt="Whatsap" src={facebook} style={{width:'clamp(10px,25px,25px)'}} ></Image>
+        <span className="text-black hover:text-blue-800" style={{fontSize:'clamp(0.5rem, 2.5vw, 2rem)'}}> Facebook </span>
+      </div>
+      <div className="flex items-center gap-3">
+        <Image className="img-luminosa" alt="Whatsap" src={instagram} style={{width:'clamp(10px,25px,25px)'}} ></Image>
+        <span className="text-black hover:text-blue-800"  style={{fontSize:'clamp(0.5rem, 2.5vw, 2rem)'}} > Instagram </span>
+      </div>
+
+
+    </footer >
+      </div >
+    </div >
   );
 }
