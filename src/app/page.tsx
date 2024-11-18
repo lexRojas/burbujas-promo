@@ -5,7 +5,6 @@ import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
 import facebook from "../../public/facebook.png"
 import Style from "./Text.module.css"
-
 import img1 from "../../public/stock/image1.jpg"
 
 
