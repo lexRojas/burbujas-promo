@@ -10,7 +10,6 @@ import img1 from "../../public/stock/image1.jpg"
 
 
 import { Sour_Gummy, Oswald } from 'next/font/google';
-import Carousel from "../../components/Carousel";
 import ImageSliderReact from "../../components/ImageSliderReact";
 
 
