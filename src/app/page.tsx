@@ -11,6 +11,7 @@ import img1 from "../../public/stock/image1.jpg"
 
 import { Sour_Gummy, Oswald } from 'next/font/google';
 import Carousel from "../../components/Carousel";
+import ImageSliderReact from "../../components/ImageSliderReact";
 
 
 
@@ -40,10 +41,10 @@ export default function Home() {
   console.log(img1.src)
 
   const imageLinks = [
-    { src: "/stock/image1.jpg", link: 'https://example.com/1' },
-    { src: "/stock/image2.jpg", link: 'https://example.com/1' },
-    { src: "/stock/image3.jpg", link: 'https://example.com/1' },
-    { src: "/stock/image4.jpg", link: 'https://example.com/1' },
+    { id: 0, src: "/stock/image1.jpg", link: 'https://example.com/1' },
+    { id: 1, src: "/stock/image2.jpg", link: 'https://example.com/1' },
+    { id: 2, src: "/stock/image3.jpg", link: 'https://example.com/1' },
+    { id: 3, src: "/stock/image4.jpg", link: 'https://example.com/1' },
 
 
 
@@ -86,9 +87,9 @@ export default function Home() {
         </div>
         <main className="flex flex-col gap-8 row-start-3 items-center  ">
 
-          <div>
+          <div className="flex flex-row">
 
-            <Carousel images={imageLinks}/>
+            <ImageSliderReact images={imageLinks}/>
 
 
 
