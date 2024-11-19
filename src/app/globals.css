@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
 
 
@@ -14,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: url("../../public/fondo.svg");
-    --foreground: #c0edff;
+    --foreground: #000000;
   }
 }
 
@@ -154,3 +155,14 @@ body {
 }
 
 
+.contenedor-carousel{
+  
+  width: clamp(100px,500px,500px);
+  height:30rem;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px rgba(44, 44, 44, 0.973));
+  background-color: #5f5f5f;
+  border: 3px solid #ffffff;
+  overflow: hidden;
+
+}

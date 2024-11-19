@@ -1,5 +1,8 @@
+
+
 import Link from "next/link";
-import Carousel from "../../components/Carousel";
+import ImageSliderReact from "../../components/ImageSliderReact";
+import MyCarousel from "../../components/MyCarousel";
 
 export default function Home() {
 
@@ -12,11 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-row">
-        {/* <ImageSliderReact images={imageLinks} /> */}
-      <Carousel images={imageLinks}/>        
-      </div>
-
+      <MyCarousel images={imageLinks} />
 
       <div className="flex flex-col gap-3 md:flex-row ">
         <div className="flex items-center 

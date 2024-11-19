@@ -8,6 +8,9 @@ import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
 import facebook from "../../public/facebook.png"
 import Style from "./Text.module.css"
+import { DarkThemeToggle } from "flowbite-react";
+
+
 import { Oswald, Roboto_Condensed } from 'next/font/google';
 
 const oswald = Oswald(
@@ -40,13 +43,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" antialiased" >
-        <div className="bubbles-container">
+        {/* <div className="bubbles-container">
 
           <div className="bubble"/>
           <div className="bubble"/>
           <div className="bubble"/>
           <div className="bubble"/>
-          <div className="bubble"/>
+          <div className="bubble"/> */}
 
 
           <div className="grid grid-rows-[auto_auto_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-6  sm:p-20 ">
@@ -93,13 +96,13 @@ export default function RootLayout({
                 <Image className="img-luminosa" alt="Whatsap" src={instagram} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
                 <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }} > Instagram </span>
               </div>
-
+              <DarkThemeToggle />
 
             </footer >
           </div >
 
 
-        </div>
+        {/* </div> */}
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ export default function Signup() {
     return (
 
 
-        <div className='md:max-w-sm w-full  p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+        <div className='md:max-w-md w-full  p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
             <form className="max-w-md mx-auto">
                 <div className="relative z-0 w-full mb-5 group">
                     <input type="number" name="cedula" id="cedula" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
