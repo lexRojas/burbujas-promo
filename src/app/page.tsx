@@ -1,7 +1,6 @@
 
 
 import Link from "next/link";
-import ImageSliderReact from "../../components/ImageSliderReact";
 import MyCarousel from "../../components/MyCarousel";
 
 export default function Home() {
