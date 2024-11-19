@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import { Carousel, Datepicker } from 'flowbite-react';
+import { Carousel } from 'flowbite-react';
 
 
 
