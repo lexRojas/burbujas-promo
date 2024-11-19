@@ -22,12 +22,12 @@ export default function MyCarousel({ images }: Props) {
 
 
     return (
-        <div className="contenedor-carousel" >
+        <div className="contenedor-carousel relative " >
             
-            <Carousel>
+            <Carousel >
 
                 {images.map((item) => (
-                    <img key={item.id} src={item.src} alt={item.link} />
+                    <Image key={item.id} src={item.src} alt={item.link} width={500} height={500} />
                 ))}
 
             </Carousel>
