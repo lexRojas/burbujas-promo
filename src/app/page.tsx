@@ -34,15 +34,17 @@ export default function Home() {
                           justify-center  
                           p-5
                           main-button-2 ">
-
-          <p className="font-extrabold   text-xl">Ver Puntos </p>
+          <Link href="/puntos">
+            <p className="font-extrabold   text-xl">Ver Puntos </p>
+          </Link>
         </div>
         <div className="flex items-center 
                           justify-center  
                           p-5
                           main-button-3 ">
-
-          <p className="font-extrabold   text-xl">Reglamento </p>
+          <Link href={"/reglamento"}>
+            <p className="font-extrabold   text-xl">Reglamento </p>
+          </Link>
         </div>
 
       </div>

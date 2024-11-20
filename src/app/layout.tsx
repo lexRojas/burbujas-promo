@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Image from "next/image";
-import burbujas from "../../public/burbujas-logo.png"
+import burbujas from "../../public/burbujas-logo.webp"
 
 import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
@@ -43,6 +43,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" antialiased" >
+
+
+
+
+
+
+
         <div className="container mx-auto bubbles-container">
 
           <div className="bubble" />
@@ -58,8 +65,10 @@ export default function RootLayout({
                 <Image
                   src={burbujas}
                   alt="Burrbujas"
-                  style={{ width: 'clamp(100px,600px,600px)' }}
+                  // style={{ width: 'clamp(100px,600px,600px)' }}
+                  width={500}
                   className="flex logo-luminoso"
+                  priority
                 >
                 </Image>
 

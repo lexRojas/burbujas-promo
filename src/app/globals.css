@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: url("../../public/fondo.svg");
+  --background: url("../../public/fondo-min.webp");
   --foreground: #010225;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: url("../../public/fondo.svg");
+    --background: url("../../public/fondo-min.webp");
     --foreground: #000000;
   }
 }
