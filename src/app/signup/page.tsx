@@ -4,7 +4,7 @@ import '@/app/signup/singup.css'
 
 import { saveUserToDatabase } from '../lib/data'
 import { User } from '../lib/modelos'
-import { ChangeEvent, useState, useEffect } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation'
@@ -18,7 +18,7 @@ export default function Signup() {
 
 
     const redirigirPagina = (ruta: string): void => {
-        const esperar = setTimeout(() => {
+        setTimeout(() => {
             router.push(ruta);
         }, 3000)
 
