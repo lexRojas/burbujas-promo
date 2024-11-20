@@ -88,7 +88,7 @@ export const getSaldoPuntosUser = async (
       // Mapeamos cada fila al tipo definido
       const saldoPuntosUsers: SaldoPuntosUser[] = result.rows.map((row) => ({
         cedula: Number(row.cedula).valueOf(),
-        nombre: row.nombre?.toString(),
+        nombre: row.nombre?.toString() ?? "",
         total_puntos: Number(row.total_puntos).valueOf(),
         total_puntos_usados: Number(row.total_puntos_usados).valueOf(),
         saldo: Number(row.saldo).valueOf(),
