@@ -35,7 +35,7 @@ export default function Component() {
 
             if (res && res.length > 0) {
 
-                setPuntos(res[0].saldo)
+                setPuntos(res[0].saldo!)
                 setVerAnimacion(true)
                 setCaraTriste(false)
 
