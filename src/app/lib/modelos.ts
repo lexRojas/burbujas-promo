@@ -1,7 +1,7 @@
 export type User = {
-  cedula: number | undefined;
+  cedula: number | null;
   nombre: string;
   direccion: string;
   correo: string;
-  telefono: number | undefined;
+  telefono: number | null;
 };
