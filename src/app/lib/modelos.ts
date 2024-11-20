@@ -25,8 +25,8 @@ export type PuntosUsadosUser = {
 
 export type SaldoPuntosUser = {
   cedula: number;
-  nombre: string;
-  total_puntos: number;
-  total_puntos_usados: number;
-  saldo: number;
+  nombre: string | undefined;
+  total_puntos: number | undefined | null;
+  total_puntos_usados: number | undefined;
+  saldo: number | undefined;
 };

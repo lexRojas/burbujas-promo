@@ -86,15 +86,13 @@ export const getSaldoPuntosUser = async (
 
     if (result && result.rows.length > 0) {
       // Mapeamos cada fila al tipo definido
-      const saldoPuntosUsers: SaldoPuntosUser[] = result.rows.map(
-        (row: any) => ({
-          cedula: row.cedula,
-          nombre: row.nombre,
-          total_puntos: row.total_puntos,
-          total_puntos_usados: row.total_puntos_usados,
-          saldo: row.saldo,
-        })
-      );
+      const saldoPuntosUsers: SaldoPuntosUser[] = result.rows.map((row) => ({
+        cedula: Number(row.cedula).valueOf(),
+        nombre: row.nombre?.toString(),
+        total_puntos: Number(row.total_puntos).valueOf(),
+        total_puntos_usados: Number(row.total_puntos_usados).valueOf(),
+        saldo: Number(row.saldo).valueOf(),
+      }));
 
       return saldoPuntosUsers; // Devolver todas las filas como un array de objetos
     }

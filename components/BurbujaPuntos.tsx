@@ -13,16 +13,20 @@ const BubbleAnimation = (props: Props) => {
     const [number, setNumber] = useState(0)
 
     const bubbleElement = useRef<HTMLDivElement | null>(null)
-    let count = 0;
-    const { puntos } = props;
 
-    let totalPuntos = 0;
 
-    let incremento = puntos / 150;
+
+
+
+
 
     useEffect(() => {
+        const { puntos } = props;
+        const incremento = puntos / 150;
+        let totalPuntos = 0;
+        let count = 0;
 
-        let interval = setInterval(() => {
+        const interval = setInterval(() => {
             if (count <= 150) { // Número máximo que se incrementa
 
                 setNumber(count)
@@ -32,7 +36,7 @@ const BubbleAnimation = (props: Props) => {
                 setNumber(Math.floor(totalPuntos))
 
                 // Ajustar el tamaño de la burbuja según el valor del contador
-                let size = 50 + count; // Ajusta el multiplicador para cambiar la escala
+                const size = 50 + count; // Ajusta el multiplicador para cambiar la escala
 
 
 
@@ -50,7 +54,7 @@ const BubbleAnimation = (props: Props) => {
         }, 50); // Velocidad de incremento
 
 
-    }, [])
+    }, [props])
 
     return (
         <div className="bubble-animation-container py-3">

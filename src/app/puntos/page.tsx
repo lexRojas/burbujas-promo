@@ -6,6 +6,7 @@ import BubbleAnimation from "../../../components/BurbujaPuntos";
 import { getSaldoPuntosUser } from "../lib/data";
 import { useRouter } from "next/navigation";
 
+
 export default function Component() {
     const [openModal, setOpenModal] = useState(true);
     const [verAnimacion, setVerAnimacion] = useState(false);
@@ -28,9 +29,9 @@ export default function Component() {
         console.log("renderizar puntos")
         setOpenModal(false);
 
-        let n_cedula = Number(cedula).valueOf()
+        const n_cedula = Number(cedula).valueOf()
 
-        const res = getSaldoPuntosUser(n_cedula).then((res) => {
+        getSaldoPuntosUser(n_cedula).then((res) => {
 
             if (res && res.length > 0) {
 
