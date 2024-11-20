@@ -14,8 +14,10 @@ export default function Home() {
 
   return (
     <>
-      <MyCarousel images={imageLinks} />
 
+      <div className="container relative flex max-w-96 mx-auto px-3">
+        <MyCarousel images={imageLinks} />
+      </div>
       <div className="flex flex-col gap-3 md:flex-row ">
         <div className="flex items-center 
                           justify-center  

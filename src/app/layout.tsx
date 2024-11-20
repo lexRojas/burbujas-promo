@@ -7,7 +7,7 @@ import burbujas from "../../public/burbujas-logo.png"
 import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
 import facebook from "../../public/facebook.png"
-import Style from "./Text.module.css"
+import "./Text.css"
 import { DarkThemeToggle } from "flowbite-react";
 
 
@@ -43,45 +43,47 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" antialiased" >
-        {/* <div className="bubbles-container">
+        <div className="container mx-auto bubbles-container">
 
-          <div className="bubble"/>
-          <div className="bubble"/>
-          <div className="bubble"/>
-          <div className="bubble"/>
-          <div className="bubble"/> */}
+          <div className="bubble" />
+          <div className="bubble" />
+          <div className="bubble" />
+          <div className="bubble" />
+          <div className="bubble" />
 
 
-        <div className="grid grid-rows-[auto_auto_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-6  sm:p-20 ">
+          <header className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-rows-[auto_auto_1fr_20px] items-center justify-items-center ">
+            <div className=" row-start-1 container flex flex-col justify-center  ">
+              <div className="inline-block mx-auto">
+                <Image
+                  src={burbujas}
+                  alt="Burrbujas"
+                  style={{ width: 'clamp(100px,600px,600px)' }}
+                  className="flex logo-luminoso"
+                >
+                </Image>
 
-          <div className="row-start-1 ">
-            <Image
-              src={burbujas}
-              alt="Burrbujas"
-              style={{ width: 'clamp(100px,600px,600px)' }}
-              className="logo-luminoso"
-            >
-            </Image>
-            <div className={Style.textcontainer} >
-              <p className={` ${oswald.className} ${Style.textmove}`}  >¡Los momentos alegres comienzan aquí!</p>
+                <div className=" flex textcontainer" >
+                  <p className={` ${oswald.className}  textmove`}  >¡Los momentos alegres comienzan aquí!</p>
+                </div>
+              </div>
             </div>
-
-          </div>
-          <div className="bar flex row-start-2 w-full justify-center align-top ">
-            <ul className={` ${roboto_condensed.className} flex flex-row  space-x-2  md:space-x-5  md:text-xl `}>
-              <li className="flex">JUGUETERIA</li>
-              <li>ELECTRÓNICOS</li>
-              <li>LIBRERÍA</li>
-            </ul>
+            <div className="bar flex row-start-2 container mx-auto px-4 sm:px-6 lg:px-8 justify-center align-top ">
+              <ul className={` ${roboto_condensed.className} flex flex-row  space-x-2  md:space-x-5  md:text-xl `}>
+                <li className="flex">JUGUETERIA</li>
+                <li>ELECTRÓNICOS</li>
+                <li>LIBRERÍA</li>
+              </ul>
 
 
-          </div>
-          <main className="flex flex-col gap-8 row-start-3 items-center w-full  ">
+            </div>
+          </header>
+          <main className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8 row-start-3 items-center ">
 
             {children}
 
           </main>
-          <footer className="row-start-4 flex  flex-row  pt-6 gap-6 flex-wrap items-center justify-center">
+          <footer className="row-start-4 container mx-auto px-4 sm:px-6 lg:px-8  flex fex-row  pt-6 gap-6 flex-wrap items-center justify-center">
             <div className="flex flex-shrink items-center gap-3">
 
               <Image className="img-luminosa" alt="Whatsap" src={whatsap} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
@@ -99,10 +101,7 @@ export default function RootLayout({
             <DarkThemeToggle />
 
           </footer >
-        </div >
-
-
-        {/* </div> */}
+        </div>
       </body>
     </html>
   );
