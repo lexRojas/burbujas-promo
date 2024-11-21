@@ -1,76 +1,133 @@
 "use client";
 
-import { Accordion } from "flowbite-react";
+import { Accordion, Button } from "flowbite-react";
+import LogoMB from "../../../components/LogoTextMB";
+import { useRouter } from "next/navigation";
+
 
 export default function Component() {
+
+    const navegate = useRouter()
+
+
     return (
-        <Accordion collapseAll >
-            <Accordion.Panel>
-                <Accordion.Title className="bg-teal-600 text-white ">What is Flowbite?</Accordion.Title>
-                <Accordion.Content>
-                    <p className="mb-2 text-gray-500 dark:text-gray-400">
-                        Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-                        dropdowns, modals, navbars, and more.
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400">
-                        Check out this guide to learn how to&nbsp;
-                        <a
-                            href="https://flowbite.com/docs/getting-started/introduction/"
-                            className="text-cyan-600 hover:underline dark:text-cyan-500"
-                        >
-                            get started&nbsp;
-                        </a>
-                        and start developing websites even faster with components on top of Tailwind CSS.
-                    </p>
-                </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
-                <Accordion.Title>Is there a Figma file available?</Accordion.Title>
-                <Accordion.Content>
-                    <p className="mb-2 text-gray-500 dark:text-gray-400">
-                        Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
-                        has a design equivalent in our Figma file.
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400">
-                        Check out the
-                        <a href="https://flowbite.com/figma/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                            Figma design system
-                        </a>
-                        based on the utility classes from Tailwind CSS and components from Flowbite.
-                    </p>
-                </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
-                <Accordion.Title>What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
-                <Accordion.Content>
-                    <p className="mb-2 text-gray-500 dark:text-gray-400">
-                        The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-                        Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-                        components, whereas Tailwind UI offers sections of pages.
-                    </p>
-                    <p className="mb-2 text-gray-500 dark:text-gray-400">
-                        However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
-                        technical reason stopping you from using the best of two worlds.
-                    </p>
-                    <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                    <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                        <li>
-                            <a href="https://flowbite.com/pro/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                                Flowbite Pro
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://tailwindui.com/"
-                                rel="nofollow"
-                                className="text-cyan-600 hover:underline dark:text-cyan-500"
-                            >
-                                Tailwind UI
-                            </a>
-                        </li>
-                    </ul>
-                </Accordion.Content>
-            </Accordion.Panel>
-        </Accordion>
+        <div className="container p-4 w-2/3 max-w-md bg-neutral-50">
+            <h1 className="pb-3 font-bold text-center mx-auto text-xl text-blue-900">Reglamento del Programa de Lealtad de Puntos - <LogoMB /></h1>
+            <p className="text-justify pb-3"> <strong>Bienvenido al programa de lealtad de <LogoMB />.</strong> A través de este reglamento, establecemos
+                las normas y condiciones para que nuestros clientes disfruten de los beneficios de acumular y canjear puntos por sus compras en nuestra tienda.
+            </p>
+            <p className="text-justify pb-3">   Tal como una alcancía que llenas poco a poco con monedas, tus compras en <LogoMB /> van sumando puntos que puedes usar para obtener beneficios en futuras adquisiciones. Este reglamento asegura que el uso de estos puntos sea justo y transparente para todos.</p>
+
+            <Accordion collapseAll >
+                <Accordion.Panel>
+                    <Accordion.Title
+                        className="hover:bg-orange-300 bg-teal-600 text-white ">
+                        1. Obtención de Puntos</Accordion.Title>
+                    <Accordion.Content className="bg-white">
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify" >
+                            1.1 Para participar en el programa, es indispensable estar inscrito en nuestra página web oficial. Tu cuenta será la "Alcancía digital" donde se acumulan los puntos.
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            1.2 Obtendrás puntos al comprar artículos en nuestras tiendas. Cada compra genera puntos equivalentes al 5% del monto de la compra. Es decir, si compras por ₡10,000, recibirás 500 puntos.
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+
+                            1.3 <strong>Promociones especiales: </strong> <LogoMB /> se reserva el derecho de etiquetar productos específicos con un porcentaje mayor de puntos, como un "doble de monedas" en días especiales.
+                        </p>
+
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            1.4 <strong>Restricción en el canje:</strong> Si utilizas puntos para pagar una compra, no ganarás puntos adicionales por ese monto.Restricción en el canje: Si utilizas puntos para pagar una compra, no ganarás puntos adicionales por ese monto.
+                        </p>
+
+
+
+                    </Accordion.Content>
+                </Accordion.Panel>
+                <Accordion.Panel>
+                    <Accordion.Title className="hover:bg-orange-300 bg-yellow-100 text-black ">
+                        2. Procedimiento para hacer efectivos los puntos</Accordion.Title>
+                    <Accordion.Content className="bg-white">
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            2.1 <strong> Uso exclusivo de puntos:</strong> Los puntos no se convierten en dinero. Solo pueden usarse para adquirir productos en nuestras tiendas o en comercios aliados si anunciamos acuerdos en nuestras redes sociales.
+
+                        </p>
+
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            2.2 <strong>Identificación necesaria:</strong> Para pagar con puntos, debes presentar tu cédula de identidad o cualquier documento emitido por <LogoMB /> que te acredite como titular de los puntos.
+                        </p>
+
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            2.3 <strong>Verificación del vendedor:</strong>El personal verificará la existencia de puntos a tu favor en el sistema y confirmará tu identidad antes de completar la transacción.
+                        </p>
+
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            2.4 <strong>Descuento aplicado:</strong>El valor de los puntos utilizados se reflejará como un descuento directo en tu compra, como si aplicáramos "un vale de ahorro invisible".
+                        </p>
+                    </Accordion.Content>
+                </Accordion.Panel>
+                <Accordion.Panel>
+                    <Accordion.Title className="hover:bg-orange-300 bg-pink-300 text-black ">
+                        3. Donde NO Aplican los Puntos</Accordion.Title>
+                    <Accordion.Content className="bg-white">
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            3.1 No puedes usar puntos para:
+                            <ul className="list-disc pl-10 text-sm">
+                                <li>Comprar artículos rebajados.</li>
+                                <li>Pagar apartados.</li>
+                                <li>Cubrir servicios públicos o recargas telefónicas.</li>
+                            </ul>
+
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            3.2 En caso de discrepancias entre los registros de <LogoMB /> y lo presentado por el cliente, la empresa se reserva el derecho de rechazar el uso de puntos si se sospecha de una alteración.
+                        </p>
+                    </Accordion.Content>
+                </Accordion.Panel>
+                <Accordion.Panel>
+                    <Accordion.Title className="hover:bg-orange-300 bg-blue-500 text-white ">
+                        4. Vigencia de los Puntos</Accordion.Title>
+                    <Accordion.Content className="bg-white">
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            4.1 Los puntos no vencen inicialmente, pero <LogoMB /> podría establecer fechas de vigencia en el futuro, notificándolo oportunamente en nuestras redes sociales.
+
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            4.2 <strong>Fin del programa:</strong> Si se decide finalizar el programa, se notificará con antelación, permitiendo el uso de puntos acumulados antes de la fecha de término.
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            4.3 Si un cliente no utiliza sus puntos y el programa termina, se asumirá que ha renunciado voluntariamente a ellos.
+                        </p>
+                    </Accordion.Content>
+                </Accordion.Panel>
+                <Accordion.Panel>
+                    <Accordion.Title className="hover:bg-orange-300 bg-orange-400 text-black ">
+                        5. Disposiciones Adicionales</Accordion.Title>
+                    <Accordion.Content className="bg-white">
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            Transferencia de puntos: Los puntos son personales e intransferibles. Solo el titular puede usarlos.
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            Cancelación de puntos: En caso de devoluciones de productos adquiridos con puntos, <LogoMB /> se reserva el derecho de revertir la cantidad de puntos correspondientes.
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            Actualización del reglamento: Este reglamento puede modificarse según las necesidades del programa. Las actualizaciones serán notificadas a través de nuestros canales oficiales.
+                        </p>
+                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            Fraude o mal uso: En caso de detectarse un intento de fraude o uso indebido del programa, los puntos del cliente podrán ser anulados sin previo aviso.
+                        </p>
+                        <p className="mb-5 text-gray-500 dark:text-gray-400 text-justify">
+                            Casos de fuerza mayor: <LogoMB /> no será responsable por la suspensión del programa debido a circunstancias fuera de su control, como desastres naturales o cambios regulatorios.
+                        </p>
+                        <hr />
+                        <p className="mt-5 text-gray-500 dark:text-gray-400 text-justify">
+                            Al participar en este programa, aceptas las condiciones aquí descritas. Así como en un juego de mesa, estas reglas nos permiten disfrutar del programa de manera justa para todos. ¡Gracias por ser parte de <LogoMB />! 🎈
+                        </p>
+                    </Accordion.Content>
+                </Accordion.Panel>
+            </Accordion>
+            <div className="flex justify-center py-1">
+                <Button className="m-4 " onClick={() => navegate.push("/")}> Regresar</Button>
+            </div>
+        </div>
     );
 }

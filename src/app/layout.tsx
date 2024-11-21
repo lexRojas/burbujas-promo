@@ -96,16 +96,16 @@ export default function RootLayout({
             <div className="flex flex-shrink items-center gap-3">
 
               <Image className="img-luminosa" alt="Whatsap" src={whatsap} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
-              <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }}> Whatsapp </span>
+              <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2vw, 2rem)' }}> Whatsapp </span>
             </div>
 
             <div className="flex items-center gap-3">
               <Image className="img-luminosa" alt="Whatsap" src={facebook} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
-              <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }}> Facebook </span>
+              <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2vw, 2rem)' }}> Facebook </span>
             </div>
             <div className="flex items-center gap-3">
-              <Image className="img-luminosa" alt="Whatsap" src={instagram} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
-              <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2.5vw, 2rem)' }} > Instagram </span>
+              <Image className="img-luminosa" alt="Whatsapp" src={instagram} style={{ width: 'clamp(10px,25px,25px)' }} ></Image>
+              <span className={`${roboto_condensed.className} text-black hover:text-blue-800`} style={{ fontSize: 'clamp(0.5rem, 2vw, 2rem)' }} > Instagram </span>
             </div>
             <DarkThemeToggle />
 
