@@ -3,7 +3,6 @@ import "./globals.css";
 
 import Image from "next/image";
 import burbujas from "../../public/burbujas-logo.webp"
-import fondo_burbujas from "../../public/fondo-min.webp"
 
 import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
