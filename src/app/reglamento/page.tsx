@@ -11,7 +11,7 @@ export default function Component() {
 
 
     return (
-        <div className="container p-4 w-2/3 max-w-md bg-neutral-50">
+        <div className="container w-11/12  px-6 md:p-4 md:w-2/3  bg-neutral-50">
             <h1 className="pb-3 font-bold text-center mx-auto text-xl text-blue-900">Reglamento del Programa de Lealtad de Puntos - <LogoMB /></h1>
             <p className="text-justify pb-3"> <strong>Bienvenido al programa de lealtad de <LogoMB />.</strong> A través de este reglamento, establecemos
                 las normas y condiciones para que nuestros clientes disfruten de los beneficios de acumular y canjear puntos por sus compras en nuestra tienda.
