@@ -69,11 +69,11 @@ export default function Component() {
                         <h3 className="text-xl font-medium text-gray-900 dark:text-white">Digite su cédula o pin</h3>
                         <div>
                             <div className="mb-2 block">
-                                <Label htmlFor="email" value="Your email" />
+                                <Label htmlFor="cedula" value="Cédula: (pin)" />
                             </div>
                             <TextInput
                                 id="cedula"
-                                placeholder="9999999"
+                                placeholder="109990999"
                                 value={cedula}
                                 onChange={(event) => setCedula(event.target.value)}
                                 required

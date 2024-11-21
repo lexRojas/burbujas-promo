@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Image from "next/image";
 import burbujas from "../../public/burbujas-logo.webp"
+import fondo_burbujas from "../../public/fondo-min.webp"
 
 import whatsap from "../../public/whatsapp.png"
 import instagram from "../../public/instagram.png"
@@ -44,9 +45,15 @@ export default function RootLayout({
     <html lang="en">
       <body className=" antialiased" >
 
+        <div className="image-container">
+          <Image
+            className=""
+            src={fondo_burbujas}
+            priority
+            alt="fondo"
 
-
-
+          />
+        </div>
 
 
 

@@ -58,7 +58,7 @@ export default function MyCarousel({ images }: Props) {
             <Carousel>
                 {images.map((item, idx) => (
                     <div key={idx} className="relative">
-                        <Image key={item.id} src={item.src} alt={item.link} width={500} height={500} />
+                        <Image key={item.id} src={item.src} alt={item.link} width={500} height={500} priority />
                     </div>
                 ))}
             </Carousel>

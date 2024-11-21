@@ -28,7 +28,7 @@ export default function Component() {
                             1.1 Para participar en el programa, es indispensable estar inscrito en nuestra página web oficial. Tu cuenta será la &quot;Alcancía digital&quot; donde se acumulan los puntos.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            1.2 Obtendrás puntos al comprar artículos en nuestras tiendas. Cada compra genera puntos equivalentes al 5% del monto de la compra. Es decir, si compras por ₡10,000, recibirás 500 puntos.
+                            1.2 Obtendrás puntos al comprar artículos en nuestras tiendas. Cada compra genera puntos equivalentes al 5% del monto de la compra. Es decir, si compras un monto de ₡10,000 colones, recibirás 500 puntos.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
 
@@ -88,7 +88,7 @@ export default function Component() {
                         4. Vigencia de los Puntos</Accordion.Title>
                     <Accordion.Content className="bg-white">
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            4.1 Los puntos no vencen inicialmente, pero <LogoMB /> podría establecer fechas de vigencia en el futuro, notificándolo oportunamente en nuestras redes sociales.
+                            4.1 Los puntos vencen al año de adquiridos, pero <LogoMB /> podría establecer fechas de vigencia mayores o menores en el futuro, notificándolo oportunamente en nuestras redes sociales.
 
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
@@ -104,19 +104,19 @@ export default function Component() {
                         5. Disposiciones Adicionales</Accordion.Title>
                     <Accordion.Content className="bg-white">
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            Transferencia de puntos: Los puntos son personales e intransferibles. Solo el titular puede usarlos.
+                            5.1 <strong>Transferencia de puntos:</strong> Los puntos son personales e intransferibles. Solo el titular puede usarlos.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            Cancelación de puntos: En caso de devoluciones de productos adquiridos con puntos, <LogoMB /> se reserva el derecho de revertir la cantidad de puntos correspondientes.
+                            5.2 <strong>Cancelación de puntos:</strong> En caso de devoluciones de productos adquiridos con puntos, <LogoMB /> se reserva el derecho de revertir la cantidad de puntos correspondientes.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            Actualización del reglamento: Este reglamento puede modificarse según las necesidades del programa. Las actualizaciones serán notificadas a través de nuestros canales oficiales.
+                            5.3 <strong>Actualización del reglamento:</strong> Este reglamento puede modificarse según las necesidades del programa. Las actualizaciones serán notificadas a través de nuestros canales oficiales.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            Fraude o mal uso: En caso de detectarse un intento de fraude o uso indebido del programa, los puntos del cliente podrán ser anulados sin previo aviso.
+                            5.4 <strong>Fraude o mal uso:</strong> En caso de detectarse un intento de fraude o uso indebido del programa, los puntos del cliente podrán ser anulados sin previo aviso.
                         </p>
                         <p className="mb-5 text-gray-500 dark:text-gray-400 text-justify">
-                            Casos de fuerza mayor: <LogoMB /> no será responsable por la suspensión del programa debido a circunstancias fuera de su control, como desastres naturales o cambios regulatorios.
+                            5.5 <strong>Casos de fuerza mayor:</strong> <LogoMB /> no será responsable por la suspensión del programa debido a circunstancias fuera de su control, como desastres naturales o cambios regulatorios.
                         </p>
                         <hr />
                         <p className="mt-5 text-gray-500 dark:text-gray-400 text-justify">
