@@ -25,14 +25,14 @@ export default function Component() {
                         1. Obtención de Puntos</Accordion.Title>
                     <Accordion.Content className="bg-white">
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify" >
-                            1.1 Para participar en el programa, es indispensable estar inscrito en nuestra página web oficial. Tu cuenta será la "Alcancía digital" donde se acumulan los puntos.
+                            1.1 Para participar en el programa, es indispensable estar inscrito en nuestra página web oficial. Tu cuenta será la &quot;Alcancía digital&quot; donde se acumulan los puntos.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
                             1.2 Obtendrás puntos al comprar artículos en nuestras tiendas. Cada compra genera puntos equivalentes al 5% del monto de la compra. Es decir, si compras por ₡10,000, recibirás 500 puntos.
                         </p>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
 
-                            1.3 <strong>Promociones especiales: </strong> <LogoMB /> se reserva el derecho de etiquetar productos específicos con un porcentaje mayor de puntos, como un "doble de monedas" en días especiales.
+                            1.3 <strong>Promociones especiales: </strong> <LogoMB /> se reserva el derecho de etiquetar productos específicos con un porcentaje mayor de puntos, como un &quot;doble de monedas&quot; en días especiales.
                         </p>
 
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
@@ -61,7 +61,7 @@ export default function Component() {
                         </p>
 
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            2.4 <strong>Descuento aplicado:</strong>El valor de los puntos utilizados se reflejará como un descuento directo en tu compra, como si aplicáramos "un vale de ahorro invisible".
+                            2.4 <strong>Descuento aplicado:</strong>El valor de los puntos utilizados se reflejará como un descuento directo en tu compra, como si aplicáramos &quot;un vale de ahorro invisible&quot;.
                         </p>
                     </Accordion.Content>
                 </Accordion.Panel>
