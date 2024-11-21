@@ -2,40 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* --background: url("../../public/fondo-min.webp"); */
-  --foreground: #010225;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --background: url("../../public/fondo-min.webp"); */
-    --foreground: #000000;
-  }
-}
-
-.image-container {
-  position: absolute; /* Lo saca del flujo normal */
-  filter: brightness(1.04);
-  top: 0; /* Alinea al borde superior */
-  left: 0; /* Alinea al borde izquierdo */
-  width: 100%; /* Ocupa todo el ancho */
-  height: 100%; /* Ocupa todo el alto */
-  z-index: -1; /* Coloca el div detrás de los demás */
-}
-
-.image-container img {
-  width: auto; /* Escala la imagen al ancho del contenedor */
-  height: auto; /* Escala la imagen al alto del contenedor */
-  object-fit: fill; /* Hace que la imagen cubra todo el área del div */
-  object-position: center; /* Centra la imagen dentro del div */
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  background-position: center;
-  background-size: cover;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../public/fondo-min.webp"); /* Imagen como fondo */
+  background-size: cover; /* La imagen cubrirá toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repite la imagen */
   font-family: Arial, Helvetica, sans-serif;
 }
 

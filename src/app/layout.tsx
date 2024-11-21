@@ -44,19 +44,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" antialiased" >
-
-        <div className="image-container">
-          <Image
-            className=""
-            src={fondo_burbujas}
-            priority
-            alt="fondo"
-
-          />
-        </div>
-
-
-
         <div className="container mx-auto bubbles-container">
 
           <div className="bubble" />
