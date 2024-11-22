@@ -11,7 +11,7 @@ export default function Component() {
 
 
     return (
-        <div className="container w-11/12  px-6 md:p-4 md:w-2/3  bg-neutral-50">
+        <div className="container   w-full  px-3 md:p-4 md:w-2/3  bg-neutral-50">
             <h1 className="pb-3 font-bold text-center mx-auto text-xl text-blue-900">Reglamento del Programa de Lealtad de Puntos - <LogoMB /></h1>
             <p className="text-justify pb-3"> <strong>Bienvenido al programa de lealtad de <LogoMB />.</strong> A través de este reglamento, establecemos
                 las normas y condiciones para que nuestros clientes disfruten de los beneficios de acumular y canjear puntos por sus compras en nuestra tienda.
@@ -69,15 +69,15 @@ export default function Component() {
                     <Accordion.Title className="hover:bg-orange-300 bg-pink-300 text-black ">
                         3. Donde NO Aplican los Puntos</Accordion.Title>
                     <Accordion.Content className="bg-white">
-                        <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
-                            3.1 No puedes usar puntos para:
+                        <div className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
+                            <p>3.1 No puedes usar puntos para:</p>
                             <ul className="list-disc pl-10 text-sm">
                                 <li>Comprar artículos rebajados.</li>
                                 <li>Pagar apartados.</li>
                                 <li>Cubrir servicios públicos o recargas telefónicas.</li>
                             </ul>
 
-                        </p>
+                        </div>
                         <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">
                             3.2 En caso de discrepancias entre los registros de <LogoMB /> y lo presentado por el cliente, la empresa se reserva el derecho de rechazar el uso de puntos si se sospecha de una alteración.
                         </p>
