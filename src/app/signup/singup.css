@@ -1,6 +1,0 @@
-.div-multicolor-border {
-    border: 2px solid; /* Define el grosor del borde */
-    
-    border-image: linear-gradient( red, yellow, green, blue) 1;
-    border-radius: 25px;
-}

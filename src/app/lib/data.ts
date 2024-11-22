@@ -1,6 +1,6 @@
 // lib/data.ts
 import { createClient } from "@libsql/client";
-import { User, SaldoPuntosUser } from "./modelos";
+import { Clientes, SaldoPuntosClientes } from "./modelos";
 
 const TURSO_URL = process.env.TURSO_URL || "";
 const TURSO_TOKEN = process.env.TURSO_TOKEN || "";
@@ -37,11 +37,11 @@ export const fetchData = async (query: string) => {
   }
 };
 
-export const saveUserToDatabase = async (user: User) => {
+export const saveUserToDatabase = async (cliente: Clientes) => {
   const client = getTursoClient();
 
   const query = `
-    INSERT INTO user (cedula, nombre, direccion, correo, telefono)
+    INSERT INTO clientes (cedula, nombre, direccion, correo, telefono)
     VALUES (?, ?, ?, ?, ?);
   `;
 
@@ -49,11 +49,11 @@ export const saveUserToDatabase = async (user: User) => {
     const result = await client.execute({
       sql: query,
       args: [
-        user.cedula,
-        user.nombre,
-        user.direccion,
-        user.correo,
-        user.telefono,
+        cliente.cedula,
+        cliente.nombre,
+        cliente.direccion,
+        cliente.correo,
+        cliente.telefono,
       ],
     });
 
@@ -66,15 +66,15 @@ export const saveUserToDatabase = async (user: User) => {
 };
 
 export const getSaldoPuntosUser = async (
-  cedula: number
-): Promise<SaldoPuntosUser[]> => {
+  cedula: string
+): Promise<SaldoPuntosClientes[]> => {
   const client = getTursoClient();
 
   const query = `
             select a.cedula, a.nombre, b.total_puntos, c.total_puntos_usados, (b.total_puntos-c.total_puntos_usados) saldo
-            from user a 
-            inner join (select cedula,sum(puntos) total_puntos from  compras_user where not vencidos group by cedula) b on a.cedula = b.cedula 
-            inner join (select cedula,sum(puntos_usados) total_puntos_usados from puntos_usados_user  group by cedula) c on a.cedula = c.cedula 
+            from clientes a 
+            inner join (select cedula,sum(puntos) total_puntos from  compras_clientes where not vencidos group by cedula) b on a.cedula = b.cedula 
+            inner join (select cedula,sum(puntos_usados) total_puntos_usados from puntos_usados_clientes  group by cedula) c on a.cedula = c.cedula 
             where a.cedula = ? 
             group by a.cedula, a.nombre;  `;
 
@@ -86,13 +86,15 @@ export const getSaldoPuntosUser = async (
 
     if (result && result.rows.length > 0) {
       // Mapeamos cada fila al tipo definido
-      const saldoPuntosUsers: SaldoPuntosUser[] = result.rows.map((row) => ({
-        cedula: Number(row.cedula).valueOf(),
-        nombre: row.nombre?.toString() ?? "",
-        total_puntos: Number(row.total_puntos).valueOf(),
-        total_puntos_usados: Number(row.total_puntos_usados).valueOf(),
-        saldo: Number(row.saldo).valueOf(),
-      }));
+      const saldoPuntosUsers: SaldoPuntosClientes[] = result.rows.map(
+        (row) => ({
+          cedula: row.cedula?.toString() ?? "",
+          nombre: row.nombre?.toString() ?? "",
+          total_puntos: Number(row.total_puntos).valueOf(),
+          total_puntos_usados: Number(row.total_puntos_usados).valueOf(),
+          saldo: Number(row.saldo).valueOf(),
+        })
+      );
 
       return saldoPuntosUsers; // Devolver todas las filas como un array de objetos
     }

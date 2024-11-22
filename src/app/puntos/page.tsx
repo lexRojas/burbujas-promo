@@ -29,9 +29,7 @@ export default function Component() {
         console.log("renderizar puntos")
         setOpenModal(false);
 
-        const n_cedula = Number(cedula).valueOf()
-
-        getSaldoPuntosUser(n_cedula).then((res) => {
+        getSaldoPuntosUser(cedula).then((res) => {
 
             if (res && res.length > 0) {
 

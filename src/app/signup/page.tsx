@@ -1,9 +1,7 @@
 'use client'
 
-import '@/app/signup/singup.css'
-
 import { saveUserToDatabase } from '../lib/data'
-import { User } from '../lib/modelos'
+import { Clientes } from '../lib/modelos'
 import { ChangeEvent, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,11 +22,7 @@ export default function Signup() {
 
     };
 
-
-
     const showToast = (mensaje: string) => {
-
-
         toast(mensaje, {
             position: 'top-right',
             autoClose: 3000, // Tiempo de visibilidad en milisegundos (3 segundos)
@@ -40,13 +34,7 @@ export default function Signup() {
         });
     };
 
-
-
-
-
-
-
-    const save_data = (nuevoUsuario: User) => {
+    const save_data = (nuevoUsuario: Clientes) => {
 
         saveUserToDatabase(nuevoUsuario)
             .then(() => {
@@ -60,11 +48,11 @@ export default function Signup() {
 
 
     const [formData, setFormData] = useState({
-        cedula: null,
+        cedula: '',
         nombre: '',
         direccion: '',
         correo: '',
-        telefono: null,
+        telefono: '',
     });
 
     const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
@@ -78,7 +66,7 @@ export default function Signup() {
     const handleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const nuevoUsuario: User = {
+        const nuevoUsuario: Clientes = {
             cedula: formData.cedula,
             nombre: formData.nombre,
             direccion: formData.direccion,
@@ -96,7 +84,7 @@ export default function Signup() {
 
 
 
-        <div className='md:max-w-md w-full   p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+        <div className='md:max-w-md w-full  p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
 
             <ToastContainer toastClassName={() => 'flex align-middle bg-sky-500 text-2xl text-white'} />
 
